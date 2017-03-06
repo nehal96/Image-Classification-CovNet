@@ -34,15 +34,11 @@ Output             | 1x10      | 10
 
 Dropout layer is after applied before Fully Conn Layer 1, after flattening CNN Layer 4.
 
-**Training on 1 batch:**
+**Training hyperparameters:**
 * Epochs: 600
 * Batch size: 256
 * Keep Probability: 0.5
 
-**Training on all batches:**
-* Epochs: 600
-* Batch size: 256
-* Keep Probability: 0.5
 
 ### Results
 
