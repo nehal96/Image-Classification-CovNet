@@ -32,7 +32,7 @@ Fully Conn Layer 1 | 1x2048    | 512
 Fully Conn Layer 2 | 1x512     | 128
 Output             | 1x10      | 10
 
-Dropout layer is after applied before Fully Conn Layer 1, after flattening CNN Layer 4.
+Dropout layer is applied before Fully Conn Layer 1, after flattening CNN Layer 4.
 
 **Training hyperparameters:**
 * Epochs: 600
