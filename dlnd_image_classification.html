@@ -12227,7 +12227,7 @@ height=250
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12284,7 +12284,7 @@ height=250
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -12379,7 +12379,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv2d_maxpool</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="p">,</span> <span class="n">conv_ksize</span><span class="p">,</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">):</span>
@@ -12457,7 +12457,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">):</span>
@@ -12516,7 +12516,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fully_conn</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">):</span>
@@ -12576,7 +12576,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">):</span>
@@ -12643,7 +12643,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_net</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">):</span>
@@ -12667,40 +12667,32 @@ Keep Prob Tests Passed.
     
     <span class="c1"># CNN layer 1 -- 32x32x3 to 16x16x48</span>
     <span class="n">conv_layer</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="p">,</span> <span class="n">conv_ksize</span><span class="p">,</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">)</span>
-    <span class="c1">#print(conv_layer)</span>
     
     <span class="c1"># CNN layer 2 -- 16x16x48 to 8x8x192</span>
     <span class="n">conv_layer</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">conv_layer</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="c1">#print(conv_layer)</span>
     
     <span class="c1"># CNN layer 3 -- 8x8x192 to 4x4x384</span>
     <span class="n">conv_layer</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">conv_layer</span><span class="p">,</span> <span class="mi">384</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">pool_strides</span><span class="p">)</span>
-    <span class="c1">#print(conv_layer)</span>
     
-    <span class="c1"># CNN layer 4 - 4x4x384 to 2x2x256</span>
+    <span class="c1"># CNN layer 4 - 4x4x384 to 2x2x512</span>
     <span class="n">conv_layer</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">conv_layer</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-    <span class="c1">#print(conv_layer)</span>
-    
-    <span class="c1">#conv_layer = conv2d_maxpool(conv_layer, 256, (1, 1), (1, 1), (1, 1), (1, 1))</span>
-    <span class="c1"># print(conv_layer)</span>
     
     <span class="c1"># TODO: Apply a Flatten Layer</span>
     <span class="c1"># Function Definition from Above:</span>
     <span class="c1">#   flatten(x_tensor)</span>
     
-    <span class="c1"># 4x4x192 to 3072 </span>
+    <span class="c1"># 2x2x512 to 2048</span>
     <span class="n">conv_layer</span> <span class="o">=</span> <span class="n">flatten</span><span class="p">(</span><span class="n">conv_layer</span><span class="p">)</span>
-    <span class="c1">#print(conv_layer)</span>
 
     <span class="c1"># TODO: Apply 1, 2, or 3 Fully Connected Layers</span>
     <span class="c1">#    Play around with different number of outputs</span>
     <span class="c1"># Function Definition from Above:</span>
     <span class="c1">#   fully_conn(x_tensor, num_outputs)</span>
     
-    <span class="c1"># Fully connected layer 1 -- 3072 to 1024</span>
+    <span class="c1"># Fully connected layer 1 -- 3072 to 512</span>
     <span class="n">fully_conn_layer</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">conv_layer</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
     
-    <span class="c1"># Fully connected layer 2 -- 1024 to 128</span>
+    <span class="c1"># Fully connected layer 2 -- 512 to 128</span>
     <span class="n">fully_conn_layer</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">fully_conn_layer</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
     
     <span class="c1"># TODO: Apply an Output Layer</span>
@@ -12713,10 +12705,6 @@ Keep Prob Tests Passed.
     
     <span class="c1"># TODO: return output</span>
     <span class="k">return</span> <span class="n">out</span>
-
-<span class="c1">#test_x = tf.placeholder(tf.float32, [None, 32, 32, 3])</span>
-<span class="c1">#test_k = tf.placeholder(tf.float32)</span>
-<span class="c1">#print(conv_net(test_x, test_k))</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
