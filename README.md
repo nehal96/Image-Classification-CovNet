@@ -1,7 +1,7 @@
 # Image Classification Convolutional Neural Network
 Classifying images from the CIFAR-10 dataset using a convolutional neural network
 
-This is Project 2 of Udacity's [Deep Learning Nanodegree Foundation](https://www.udacity.com/course/deep-learning-nanodegree-foundation--nd101) program. The aim of this project is go through the entire process of building a simple convolutional neural network (CNN).
+This is Project 2 of Udacity's [Deep Learning Nanodegree Foundation](https://www.udacity.com/course/deep-learning-nanodegree-foundation--nd101) program. The aim of this project is go through the entire process of building a simple convolutional neural network (CNN) in TensorFlow.
 
 ### Files
 [Jupyter Notebook](https://github.com/nehal96/Image-Classification-CovNet/blob/master/dlnd_image_classification.ipynb) or [HTML](https://nehal96.github.io/Image-Classification-CovNet/dlnd_image_classification.html)
